@@ -14,8 +14,15 @@
 }
 
 .white-tableau {
+    border-radius: 10px;
     background-color: white;
     font-family: 'Kodchasan', sans-serif;
+    max-width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20%;
+
 }
 
 .logo-top {
@@ -73,7 +80,7 @@
     margin-right: 2%;
     padding-left: 2%;
     border-radius: 10px;
-    min-width: 200px;
+    min-width: 220px;
 }
 
 .copy {
