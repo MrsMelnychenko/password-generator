@@ -8,7 +8,8 @@
     <title>Document</title>
     <link rel="icon" type="image/x-icon" href="/img/annoying.png">
     <link rel="stylesheet" href="css/index.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
@@ -16,7 +17,7 @@
     <div class="white-tableau">
         <div class="logo-top">
             <img class="logo" src="img/locker-open.jpg" alt="locker-open">
-            <!-- <img src="img/dotted-line.jpg" alt="itineraire"> -->
+            <img class="line" src="img/dotted-line.svg" alt="itineraire">
             <img class="logo" src="img/locker-closed.jpg" alt="locker-closed">
         </div>
 
@@ -29,34 +30,47 @@
             <div class="gen-password">Your Password</div>
             <button class="copy" type="button"><img class="copy-icon" src="img/copy-icon.png" alt="copy-icon"> Copy
             </button>
-            <!-- <button class="copy" style="font-size:24px"><i class="fa fa-files-o"></i></button> -->
             <h4 class="strong">Strong</h4>
             <h4 class="medium">Medium</h4>
             <h4 class="weak">Weak</h4>
         </div>
 
-        <h3>Number of characters:<output name="number-characters"></output></h3>
-        <input type="range" name="B" value="8" min="0" max="30" />
-
-        <label class="container">Uppercase:
-            <input type="checkbox" checked="checked">
-            <span class="checkmark"></span>
-        </label>
-
-        <label class="container">Lowercase:
-            <input type="checkbox">
-            <span class="checkmark"></span>
-        </label>
-
-        <label class="container">Numbers:
-            <input type="checkbox">
-            <span class="checkmark"></span>
-        </label>
-
-        <label class="container">Special characters:
-            <input type="checkbox">
-            <span class="checkmark"></span>
-        </label>
+        <div class="char-number">
+            <h3 class="numbers">Number of characters:<div class="char-password">XXX</div>
+            </h3>
+        </div>
+        <input class="scale" type="range" name="scale" value="8" min="0" max="30" />
+        <div class="checkbox">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Uppercase
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                <label class="form-check-label" for="flexCheckChecked">
+                    Lowercase
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Numbers
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                <label class="form-check-label" for="flexCheckChecked">
+                    Special characters
+                </label>
+            </div>
+        </div>
+        <div class="generate">
+            <button class="generate-btn" type="button">
+                GENERATE
+            </button>
+        </div>
     </div>
     <img src="/img/background.jpg" class="background">
 </body>
