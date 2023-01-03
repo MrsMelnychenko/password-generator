@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="icon" type="image/x-icon" href="/img/annoying.png">
     <link rel="stylesheet" href="css/index.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 </head>
 
 <body>
@@ -20,17 +21,22 @@
         </div>
 
         <div class="title">
-            <h1>PASSWORD GENERATOR</h1>
-            <h2>Create strong and secure password to keep your data safe online.</h2>
+            <h1 class="header">PASSWORD GENERATOR</h1>
+            <h2 class="sub-header">Create strong and secure password to keep your data safe online.</h2>
         </div>
 
-        <!-- <input>
-        <button></button> -->
-        <h4>Strong</h4>
-        <h4>Medium</h4>
-        <h4>Weak</h4>
+        <div class="password-field">
+            <div class="gen-password">Your Password</div>
+            <button class="copy" type="button"><img class="copy-icon" src="img/copy-icon.png" alt="copy-icon"> Copy
+            </button>
+            <!-- <button class="copy" style="font-size:24px"><i class="fa fa-files-o"></i></button> -->
+            <h4 class="strong">Strong</h4>
+            <h4 class="medium">Medium</h4>
+            <h4 class="weak">Weak</h4>
+        </div>
 
-        <h3>Number of characters:<a>???</a></h3>
+        <h3>Number of characters:<output name="number-characters"></output></h3>
+        <input type="range" name="B" value="8" min="0" max="30" />
 
         <label class="container">Uppercase:
             <input type="checkbox" checked="checked">
