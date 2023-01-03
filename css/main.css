@@ -9,6 +9,30 @@
     z-index: -1;
 }
 
+.white-tableau {
+    background-color: white;
+}
+
+.logo-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10%;
+}
+
+.logo {
+    height: 50px;
+}
+
+.title {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+}
+
 /* Customize the label (the container) */
 .container {
     display: block;
