@@ -124,7 +124,7 @@
     display: flex;
 }
 
-.scale {
+.range {
     margin-left: 10%;
     min-width: 290px;
 }
