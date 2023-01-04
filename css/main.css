@@ -59,17 +59,17 @@
     font-weight: 400;
 }
 
-.strong {
-    display: none;
-}
+/* .strong {
+    background-color: aqua;
+} */
 
-.medium {
+/* .medium {
     display: none;
 }
 
 .weak {
     display: none;
-}
+} */
 
 .password-field {
     display: flex;
