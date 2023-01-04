@@ -27,8 +27,11 @@
         </div>
 
         <div class="password-field">
-            <div class="gen-password">Your Password</div>
-            <button class="copy" type="button"><img class="copy-icon" src="img/copy-icon.png" alt="copy-icon"> Copy
+            <div>
+                <input type="text" class="  " placeholder="Your password" readonly>
+            </div>
+            <button class="copy" type="button" onclick="copyPassword()"><img class="copy-icon" src="img/copy-icon.png"
+                    alt="copy-icon"> Copy
             </button>
             <h4 class="strong">Strong</h4>
             <h4 class="medium">Medium</h4>
@@ -39,7 +42,7 @@
             <h3 class="numbers">Number of characters:<div class="char-password">XXX</div>
             </h3>
         </div>
-        <input class="range" type="range" name="scale" value="8" min="0" max="30" />
+        <input class="range" type="range" name="scale" min="1" max="30">
         <output class="bubble"></output>
         <div class="checkbox">
             <div class="form-check">
