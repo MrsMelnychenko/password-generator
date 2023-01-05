@@ -95,16 +95,35 @@ const generator = document.querySelector(".generate-btn");
 generator.addEventListener("click", generatePasswd);
 
 // Function to display Strong-Medium-Weak password check
-function checkPasswd() {    
-    if (passwdLength.innerHTML > 12) {
-        strong.classList.replace('strong','strong-check');
+function checkPasswd() { 
+    const checkboxOne = Upper.checked === true && Lower.checked === true && Nums.checked === true;
+    const checkboxTwo = Upper.checked === true && Lower.checked === true && Symbols.checked === true;
+    const checkboxThree = Upper.checked === true && Nums.checked === true && Symbols.checked === true;
+    const checkboxFour = Lower.checked === true && Nums.checked === true && Symbols.checked === true;
+    
+    
+    if (passwdLength.innerHTML > 12 && Upper.checked === true && Lower.checked === true && Nums.checked === true
+            && Symbols.checked === true || passwdLength.innerHTML >= 16) {
+        strong.classList.replace('strong', 'strong-check');
+        setTimeout(removeCheckStrong, 1000);
+    } else if (passwdLength.innerHTML < 16 && passwdLength.innerHTML > 9 && passwdLength.innerHTML > 9 && checkboxOne || checkboxTwo
+        ||checkboxThree || checkboxFour) {
+        medium.classList.replace('medium', 'medium-check');
+        setTimeout(removeCheckMedium, 1000);
+    } else {
+        weak.classList.replace('weak', 'weak-check');
+        setTimeout(removeCheckWeak, 1000);
     }
-    if (passwdLength.innerHTML <= 12 && passwdLength.innerHTML > 6) {
-        medium.classList.replace('medium','medium-check');
-    }
-    if (passwdLength.innerHTML <= 6) {
-        weak.classList.replace('weak','weak-check');
-    }
+}
+
+function removeCheckStrong() {
+    strong.classList.replace('strong-check','strong');
+}
+function removeCheckMedium() {
+    medium.classList.replace('medium-check','medium');
+}
+function removeCheckWeak() {
+    weak.classList.replace('weak-check','weak');
 }
 generator.addEventListener("click", checkPasswd);
 
