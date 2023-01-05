@@ -28,7 +28,7 @@ scale.addEventListener('input', function () {
 function generatePasswd() {
     let password = '';
     let passwdBase = '';
-    for (let i = 0; i <= scale.value; i++) {
+    for (let i = 1; i <= scale.value; i++) {
         //   IFs to set a string to generate password from
         if (Upper.checked === true) {
             passwdBase = passwdBaseAZ;
@@ -106,8 +106,8 @@ function checkPasswd() {
             && Symbols.checked === true || passwdLength.innerHTML >= 16) {
         strong.classList.replace('strong', 'strong-check');
         setTimeout(removeCheckStrong, 1000);
-    } else if (passwdLength.innerHTML < 16 && passwdLength.innerHTML > 9 && passwdLength.innerHTML > 9 && checkboxOne || checkboxTwo
-        ||checkboxThree || checkboxFour) {
+    } else if (passwdLength.innerHTML < 16 && passwdLength.innerHTML > 9 && (checkboxOne || checkboxTwo
+        ||checkboxThree || checkboxFour)) {
         medium.classList.replace('medium', 'medium-check');
         setTimeout(removeCheckMedium, 1000);
     } else {
