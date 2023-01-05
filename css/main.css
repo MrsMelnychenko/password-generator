@@ -17,12 +17,12 @@
     border-radius: 10px;
     background-color: white;
     font-family: 'Kodchasan', sans-serif;
-    max-width: 90%;
+    width: 90%;
+    max-width: 400px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20%;
-
+    margin-top: 5%;
 }
 
 .logo-top {
@@ -53,27 +53,27 @@
 
 .sub-header {
     font-size: 15px;
-    margin-top: -3%;
     padding-left: 10%;
     padding-right: 10%;
     font-weight: 400;
 }
 
-/* .strong {
-    background-color: aqua;
-} */
+.strong {
+    display: none;
+}
 
-/* .medium {
+.medium {
     display: none;
 }
 
 .weak {
     display: none;
-} */
+}
 
 .password-field {
     display: flex;
     justify-content: center;
+    margin-top: 5%;
 }
 
 .gen-passwd {
@@ -125,13 +125,18 @@
     font-size: 14px;
     font-weight: 700;
     margin-left: 10%;
-    margin-top: 10%;
+    /* margin-top: 10%; */
     display: flex;
 }
 
 .range {
     margin-left: 10%;
-    min-width: 290px;
+    margin-right: 10%;
+    min-width: 80%;
+}
+
+.checkbox {
+    padding-bottom: 5%;
 }
 
 .form-check {
@@ -146,6 +151,7 @@
 
 .generate {
     padding-bottom: 10%;
+    padding-top: 0%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -170,4 +176,23 @@
 .warning-activate {
     display: flex;
     justify-content: center;
+    margin-bottom: -5%;
+}
+
+.strong-check {
+    color: green;
+    padding-left: 15%;
+    font-size: small;
+}
+
+.medium-check {
+    color: grey;
+    padding-left: 15%;
+    font-size: small;
+}
+
+.weak-check {
+    color: red;
+    padding-left: 15%;
+    font-size: small;
 }

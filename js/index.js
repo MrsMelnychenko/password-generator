@@ -4,6 +4,10 @@ const passwdBaseAZ = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const passwdBaseaz ='abcdefghijklmnopqrstuvwxyz';
 const passwdBaseSpec = '!"#$%&()*+,-./:;<=?@[]\^_`{|}~';
 const warning = document.querySelector(".warning");
+const generateBtn = document.querySelector(".generate");
+const weak = document.querySelector(".weak");
+const medium = document.querySelector(".medium");
+const strong = document.querySelector(".strong");
 
 //Checkbox options
 const Upper = document.querySelector(".Uppercase");
@@ -24,7 +28,6 @@ scale.addEventListener('input', function () {
 function generatePasswd() {
     let password = '';
     let passwdBase = '';
-    // debugger;
     for (let i = 0; i <= scale.value; i++) {
         //   IFs to set a string to generate password from
         if (Upper.checked === true) {
@@ -91,22 +94,23 @@ warning.classList.remove("warning-activate")
 const generator = document.querySelector(".generate-btn");
 generator.addEventListener("click", generatePasswd);
 
+// Function to display Strong-Medium-Weak password check
+function checkPasswd() {    
+    if (passwdLength.innerHTML > 12) {
+        strong.classList.replace('strong','strong-check');
+    }
+    if (passwdLength.innerHTML <= 12 && passwdLength.innerHTML > 6) {
+        medium.classList.replace('medium','medium-check');
+    }
+    if (passwdLength.innerHTML <= 6) {
+        weak.classList.replace('weak','weak-check');
+    }
+}
+generator.addEventListener("click", checkPasswd);
+
+// Function to activate COPY button
 function copyPasswd() {
     let copyText = document.querySelector(".gen-passwd")    ;
   copyText.select();
   navigator.clipboard.writeText(copyText.value);
 }
-// function myFunction() {
-//   // Get the text field
-//   var copyText = document.getElementById("myInput");
-
-//   // Select the text field
-//   copyText.select();
-//   copyText.setSelectionRange(0, 99999); // For mobile devices
-
-//    // Copy the text inside the text field
-//   navigator.clipboard.writeText(copyText.value);
-
-//   // Alert the copied text
-//   alert("Copied the text: " + copyText.value);
-// }
