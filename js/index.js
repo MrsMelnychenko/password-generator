@@ -95,7 +95,7 @@ const generator = document.querySelector(".generate-btn");
 generator.addEventListener("click", generatePasswd);
 
 // Function to display Strong-Medium-Weak password check
-function checkPasswd() { 
+function checkPasswd() {
     const checkboxOne = Upper.checked === true && Lower.checked === true && Nums.checked === true;
     const checkboxTwo = Upper.checked === true && Lower.checked === true && Symbols.checked === true;
     const checkboxThree = Upper.checked === true && Nums.checked === true && Symbols.checked === true;
@@ -103,13 +103,17 @@ function checkPasswd() {
     
     
     if (passwdLength.innerHTML > 12 && Upper.checked === true && Lower.checked === true && Nums.checked === true
-            && Symbols.checked === true || passwdLength.innerHTML >= 16) {
+        && Symbols.checked === true) {
         strong.classList.replace('strong', 'strong-check');
         setTimeout(removeCheckStrong, 1000);
     } else if (passwdLength.innerHTML < 16 && passwdLength.innerHTML > 9 && (checkboxOne || checkboxTwo
-        ||checkboxThree || checkboxFour)) {
+        || checkboxThree || checkboxFour)) {
         medium.classList.replace('medium', 'medium-check');
         setTimeout(removeCheckMedium, 1000);
+    } else if (Upper.checked === false && Lower.checked === false && Nums.checked === false
+        && Symbols.checked === false) {
+        warning.classList.add("warning-activate");
+            setTimeout(removeWarning, 1500);
     } else {
         weak.classList.replace('weak', 'weak-check');
         setTimeout(removeCheckWeak, 1000);
